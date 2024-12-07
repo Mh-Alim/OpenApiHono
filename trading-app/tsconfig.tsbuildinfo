@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/generated/index.ts","./src/generated/core/apierror.ts","./src/generated/core/apirequestoptions.ts","./src/generated/core/apiresult.ts","./src/generated/core/cancelablepromise.ts","./src/generated/core/openapi.ts","./src/generated/core/request.ts","./src/generated/models/user.ts","./src/generated/services/defaultservice.ts"],"version":"5.7.2"}

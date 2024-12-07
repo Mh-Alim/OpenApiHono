@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "version": "1.0.1",
+      "title": "Hono api"
+    },
+    "components": {
+      "schemas": {
+        "User": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "345"
+            },
+            "name": {
+              "type": "string",
+              "example": "alim khan"
+            },
+            "age": {
+              "type": "number",
+              "example": 42
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "age"
+          ]
+        }
+      },
+      "parameters": {
+  
+      }
+    },
+    "paths": {
+      "/users/{id}": {
+        "get": {
+          "parameters": [
+            {
+              "schema": {
+                "type": "string",
+                "minLength": 3,
+                "example": "23434"
+              },
+              "required": true,
+              "name": "id",
+              "in": "path"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Retrieved the user",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
